@@ -21,8 +21,8 @@
         <label for = " contraseña " > CONTRASEÑA </label>
         <input type = " password " placeholder = " Password ">
         <a  href = " # " > ¿Olvidaste  tu contraseña? </a><br>
-        <input type = " submit " value = " Iniciar sesión ">
-      </form >
+        <button class="Iniciar">Iniciar Sesión</button>
+      </form>
     </div>
   </body>
 </html>

@@ -73,7 +73,7 @@ body {
     border-radius: 20px;
   }
   
-  .login-box input[type=" submit "] {
+  .login-box .Iniciar {
     align-items: center;
     padding: 10 0 0px;
     position: relative;
@@ -90,14 +90,14 @@ body {
     transform: translate(30%, 80%);
   }
 
-  .login-box input[value=" Iniciar sesión "] {
+  .login-box .Iniciar {
     text-align: center;
     transform: translate(30%, 80%);
     opacity: 70%;
   }
 
   
-  .login-box input[type=" submit "]:hover {
+  .login-box .Iniciar:hover {
     cursor: pointer;
     background: #637475;
     color: #000;
