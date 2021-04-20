@@ -4,7 +4,7 @@
     <meta charset = " utf-8 ">
     <title>Login design| XD</title>
      <!-- css -->
-    <link rel="stylesheet" href="<?= base_url() ?>/public/css/login.css">
+    <link rel="stylesheet" href="<?= base_url() ?>/resource/css/login.css">
 
   </head >
   <body>
@@ -25,4 +25,4 @@
       </form>
     </div>
   </body>
-</html>
+</html>s
