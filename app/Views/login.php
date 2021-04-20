@@ -8,10 +8,10 @@
 
   </head >
   <body>
-  <img src="public/imagenes/supermercado.png" alt="fondos" class="fondo">
+  <img src="resource/imagenes/supermercado.png" alt="fondos" class="fondo">
   <div  class = " login-box " >
-      <img  src = "public/imagenes/usuario.png" class = " avatar " alt = " Imagen de Avatar " >
-      <img  src = "public/imagenes/iniciar-sesion.png" class = " avatarIS " alt = " Imagen de AvatarIS " >
+      <img  src = "resource/imagenes/usuario.png" class = " avatar " alt = " Imagen de Avatar " >
+      <img  src = "resource/imagenes/iniciar-sesion.png" class = " avatarIS " alt = " Imagen de AvatarIS " >
       <h1> Iniciar sesión </h1>
       <form>
         <!--ENTRADA DE USUARIO-->
