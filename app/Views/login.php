@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset = " utf-8 ">
-    <title>Login design| XD</title>
+    <title>Login</title>
      <!-- css -->
     <link rel="stylesheet" href="<?= base_url() ?>/resource/css/login.css">
 
