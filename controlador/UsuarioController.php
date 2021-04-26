@@ -8,7 +8,7 @@ if ($_POST['funcion']=='buscar_usuario') {
         $json[]=array(
             'nombre'=>$objeto->nombre_us,
             'apellidos'=>$objeto->apellidos_us,
-            'edad'=>$objeto->edad_us,
+            'edad'=>$objeto->edad,
             'dni'=>$objeto->dni_us,
             'tipo'=>$objeto->nombre_tipo,
             'telefono'=>$objeto->telefono_us,
@@ -23,7 +23,7 @@ if ($_POST['funcion']=='buscar_usuario') {
 }
 if ($_POST['funcion']=='capturar_datos') {
     $json=array();
-    $id_usuario=$POST['id_usuario'];
+    $id_usuario=$_POST['id_usuario'];
     $usuario->obtener_datos($id_usuario);
     foreach ($usuario->objetos as $objeto) {
         $json[]=array(
@@ -38,7 +38,7 @@ if ($_POST['funcion']=='capturar_datos') {
     echo $jsonstring;
 }
 if ($_POST['funcion']=='editar_usuario') {
-    $id_usuario=$POST['id_usuario'];
+    $id_usuario=$_POST['id_usuario'];
     $telefono=$_POST['telefono'];
     $direccion=$_POST['direccion'];
     $correo=$_POST['correo'];

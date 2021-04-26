@@ -1,4 +1,6 @@
 <?php
+session_start();
+if ($_SESSION['us_tipo']==1) {
     include_once 'layouts/header.php';
 ?>
 
@@ -49,7 +51,7 @@
                                             </li>
 
                                             <li class="list-group-item">
-                                                <b style="color:#0b7300">Tipo Usuario</b><a class="float-right">12</a>
+                                                <b style="color:#0b7300">Tipo Usuario</b>
                                                     <span id="us_tipo" class="float-right badge badge-primary">Administrador</span>
                                             </li>
                                         </ul>
@@ -113,7 +115,14 @@
                                         </div>
 
                                         <div class="form-group row">
-                                            <label for="correo" class="col-form-label col-sm-2">Direccion</label>
+                                            <label for="direccion" class="col-form-label col-sm-2">Direccion</label>
+                                            <div class="col-sm-10">
+                                            <input type="text" id="direccion" class="form-control">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group row">
+                                            <label for="correo" class="col-form-label col-sm-2">Correo</label>
                                             <div class="col-sm-10">
                                             <input type="text" id="correo" class="form-control">
                                             </div>
@@ -151,5 +160,9 @@
 <?php
 include_once 'layouts/footer.php';
 
+}
+else{
+    header('Location: ../index.php');
+}
 ?>
 <script src="../js/Usuario.js"></script>

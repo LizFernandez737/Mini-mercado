@@ -5,8 +5,8 @@ $(document).ready(function(){
     buscar_usuario(id_usuario);
     function buscar_usuario(dato) {
         funcion='buscar_usuario';
-        $.popost('../controlador/UsuarioController.php',{dato,funcion},(response)=>{
-            
+        $.post('../controlador/UsuarioController.php',{dato,funcion},(response)=>{
+        console.log(response);
             let nombre='';
             let apellidos='';
             let edad='';
@@ -29,7 +29,7 @@ $(document).ready(function(){
             sexo+=`${usuario.sexo}`;
             adicional+=`${usuario.adicional}`;
             $('#nombre_us').html(nombre);
-            $('#apellidos_us').html(apeliidos);
+            $('#apellidos_us').html(apellidos);
             $('#edad').html(edad);
             $('#dni_us').html(dni);
             $('#us_tipo').html(tipo);
