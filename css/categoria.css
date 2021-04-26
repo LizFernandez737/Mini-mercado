@@ -1,0 +1,35 @@
+.elemento{
+    flex-grow:2;
+    color: black;
+    margin:40px ;
+    width: auto;
+    height:auto; /* flex-grow:2;-3-4 sustituye a el ancho*/
+    background: white;
+    text-align:center;
+    border: 1px solid #bbbbbb;
+    padding:10px;
+    border-radius: 3%;
+  }
+    
+    .contenedorr{
+      background-image: url(img/mini.png);
+      /*background:#bbbbbb;*/
+      padding:12px;
+      width: auto;
+      height: auto;
+      margin:auto;
+       /*flexbox*/
+      display:-webkit-flex;
+      display:-ms-flexbox;
+      display: flex;
+      flex-direction: row;
+      flex-wrap:wrap;
+      align-content: center;
+     }
+     .boton{
+      background-color:#006a71; 
+      border-radius: 45%;
+      width: 120px;
+      color: white;
+      padding:3px;
+     }

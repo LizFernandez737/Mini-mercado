@@ -1,44 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type = "text/css"href="css/style.css">
+    <link rel="stylesheet" type = "text/css"href="css/css/all.min.css">
+</head>
+
 <?php
-
-// Valid PHP Version?
-$minPHPVersion = '7.3';
-if (version_compare(PHP_VERSION, $minPHPVersion, '<'))
-{
-	die("Your PHP version must be {$minPHPVersion} or higher to run CodeIgniter. Current version: " . PHP_VERSION);
+session_start();
+if(!empty($_SESSION['us_tipo'])){
+    header('Location: controlador/LoginController.php');
 }
-unset($minPHPVersion);
+else{
+    session_destroy();
+?>
 
-// Path to the front controller (this file)
-define('FCPATH', __DIR__ . DIRECTORY_SEPARATOR);
-
-/*
- *---------------------------------------------------------------
- * BOOTSTRAP THE APPLICATION
- *---------------------------------------------------------------
- * This process sets up the path constants, loads and registers
- * our autoloader, along with Composer's, loads our constants
- * and fires up an environment-specific bootstrapping.
- */
-
-// Ensure the current directory is pointing to the front controller's directory
-chdir(__DIR__);
-
-// Load our paths config file
-// This is the line that might need to be changed, depending on your folder structure.
-require realpath(FCPATH . './app/Config/Paths.php') ?: FCPATH . './app/Config/Paths.php';
-// ^^^ Change this if you move your application folder
-
-$paths = new Config\Paths();
-
-// Location of the framework bootstrap file.
-$bootstrap = rtrim($paths->systemDirectory, '\\/ ') . DIRECTORY_SEPARATOR . 'bootstrap.php';
-$app       = require realpath($bootstrap) ?: $bootstrap;
-
-/*
- *---------------------------------------------------------------
- * LAUNCH THE APPLICATION
- *---------------------------------------------------------------
- * Now that everything is setup, it's time to actually fire
- * up the engines and make this app do its thang.
- */
-$app->run();
+<body>
+  <div class="contenedor">
+  <img class="wave" src="img/supermercado.png" alt="">
+<div class="contenido-login">
+<form action="controlador/LoginController.php" method="post">
+  <h2>Iniciar Sesión</h2>
+<div class="input-div dni">
+<div class="i">
+<i class="fas fa-user"></i>
+</div>
+<div class="div">
+<h5>Usuario</h5>
+<input type="text" name="user" class="input"> 
+</div>
+</div>
+<div class="input-div pass">
+<div class="i">
+<i class="fas fa-lock"></i>
+</div>
+<div class="div">
+<h5>Contraseña</h5>
+<input type="password" name="pass" class="input">
+</div>
+</div><br>
+<input type="submit" class="btn" value="iniciar sesion">
+</form>
+</div>  
+  </div>
+</body>
+<script src="js/login.js"></script>
+</html>
+<?php
+}
+?>
